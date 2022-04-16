@@ -19,6 +19,7 @@ class Counters extends Model
     protected $table = 'Counters';
     public $id;
     public $count;
+    public $zzzz;
     public $createdAt;
     public $updateAt;
 }

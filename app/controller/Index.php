@@ -31,6 +31,16 @@ class Index
         return response(file_get_contents(dirname(dirname(__FILE__)).'/view/index.html'));
     }
 
+    public function zzzz() : Json
+    {
+      $res = [
+          "code" => 0,
+          "data" => 'zzzz'
+      ];
+      Log::write('getCount rsp: '.json_encode($res));
+      return json($res);
+    }
+
 
     /**
      * 获取todo list
@@ -78,7 +88,7 @@ class Index
                 }else {
                     $count = $data["count"] + 1;
                 }
-    
+
                 $counters = new Counters;
                 $counters->create(
                     ["count" => $count, 'id' => 1],
